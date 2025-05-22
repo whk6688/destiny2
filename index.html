@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>命运占卜师</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 星空背景 -->
+        <div class="stars-bg" id="stars-bg"></div>
+        
+        <!-- 浮动元素 -->
+        <div class="floating-elements" id="floating-elements"></div>
+        
+        <!-- 主内容区 -->
+        <div class="container">
+            <div class="fortune-card">
+                <h1 class="title">命运占卜师</h1>
+                <p class="subtitle">探索你的命运轨迹，揭示生命奥秘</p>
+                
+                <!-- 生日选择区域 -->
+                <div class="birthday-picker">
+                    <label for="birthday-input">您的生日</label>
+                    <input type="text" id="birthday-input" readonly placeholder="请选择您的生日" />
+                    
+                    <!-- 日期选择弹窗 -->
+                    <div class="date-picker-popup" id="date-picker-popup">
+                        <div class="date-picker-header">
+                            <button id="date-picker-cancel">取消</button>
+                            <h3>选择生日</h3>
+                            <button id="date-picker-confirm">确定</button>
+                        </div>
+                        <div class="date-picker-content">
+                            <div class="date-picker-column" id="year-picker">
+                                <!-- 年份选项将通过JS动态生成 -->
+                            </div>
+                            <div class="date-picker-column" id="month-picker">
+                                <!-- 月份选项将通过JS动态生成 -->
+                            </div>
+                            <div class="date-picker-column" id="day-picker">
+                                <!-- 日期选项将通过JS动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 算命按钮 -->
+                <button class="btn-fortune" id="fortune-btn">揭示命运</button>
+                
+                <!-- 加载动画 -->
+                <div class="loading-animation" id="loading-animation">
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                </div>
+                
+                <!-- 命运结果展示区 -->
+                <div class="fortune-result" id="fortune-result">
+                    <div class="fortune-header">
+                        <div class="zodiac-symbol">✨</div>
+                        <h3>命运揭示</h3>
+                    </div>
+                    <div class="fortune-content" id="fortune-content">
+                        <!-- 命运内容将通过JS动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ai-service.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
